@@ -5,17 +5,6 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#EB9654",
-          "foreground": "#ffffff",
-          "leading_diamond": "\ue0b6",
-          "properties": {
-            "display_host": false
-          },
-          "style": "diamond",
-          "template": "{{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }} ",
-          "type": "session"
-        },
-        {
           "background": "lightYellow",
           "foreground": "#3f3f3f",
           "properties": {
