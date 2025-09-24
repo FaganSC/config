@@ -49,27 +49,6 @@
           "type": "spotify"
         },
         {
-          "background": "#cc00ff",
-          "foreground": "#ffffff",
-          "properties": {
-            "time_format": "15:04:05"
-          },
-          "style": "plain",
-          "template": " {{ .CurrentDate | date .Format }} ",
-          "type": "time"
-        },
-        {
-          "background": "#49404f",
-          "foreground": "#ffffff",
-          "properties": {
-            "style": "dallas",
-            "threshold": 0
-          },
-          "style": "plain",
-          "template": " {{ .FormattedMs }}s ",
-          "type": "executiontime"
-        },
-        {
           "type": "status",
           "style": "diamond",
           "foreground": "#ffffff",
