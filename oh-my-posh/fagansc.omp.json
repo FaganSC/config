@@ -32,7 +32,7 @@
           "properties": {
             "style": "full"
           },
-          "style": "plain",
+          "style": "powerline",
           "template": " {{ .Path }} ",
           "type": "path"
         },
