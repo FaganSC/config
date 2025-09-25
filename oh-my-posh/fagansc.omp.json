@@ -15,6 +15,7 @@
             "{{ if eq .OS \"windows\" }}#ffffff{{ end }}",
             "{{ if eq .OS \"ubuntu\" }}#000000{{ end }}"
           ],
+          "leading_diamond": "\ue0b6",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "windows": "\uf17a"
@@ -82,6 +83,7 @@
         {
           "background": "#6a0000",
           "foreground": "#ffffff",
+          "leading_diamond": "\ue0b6",
           "properties": {
             "style": "roundrock",
             "threshold": 0
@@ -109,7 +111,7 @@
           "background": "#40c4ff",
           "foreground": "#ffffff",
           "invert_powerline": true,
-          "leading_diamond": "\ue0b2",
+          "leading_diamond": "\ue0b6",
           "properties": {
             "time_format": "_2,15:04"
           },
