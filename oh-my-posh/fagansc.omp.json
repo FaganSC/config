@@ -5,6 +5,17 @@
       "alignment": "left",
       "segments": [
         {
+          "background": "#6CA35E",
+          "foreground": "#ffffff",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "powerline",
+          "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "type": "node"
+        },
+        {
           "background": "lightYellow",
           "foreground": "#3f3f3f",
           "properties": {
