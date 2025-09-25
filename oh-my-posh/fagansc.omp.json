@@ -59,16 +59,23 @@
           },
           "style": "powerline",
           "template": " {{ .HEAD }} ",
-          "type": "git"
+          "type": "git",
+          "source": "cli",
+          "mapped_branches": {
+            "main": "🌲 ",
+            "develop": "🌳 ",
+            "hotfix/*": "🚑 ",
+            "feature/*": "🚀 ",
+            "bug/*": "🐛 ",
+            "release/*": "🏷️ "
+          }
         },
         {
           "type": "status",
           "style": "diamond",
           "foreground": "#ffffff",
           "background": "#00897b",
-          "background_templates": [
-            "{{ if .Error }}#e91e63{{ end }}"
-          ],
+          "background_templates": ["{{ if .Error }}#e91e63{{ end }}"],
           "trailing_diamond": "\ue0b0",
           "properties": {
             "always_enabled": false
@@ -130,9 +137,7 @@
       "segments": [
         {
           "foreground": "#ffffff",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}#ff0000{{ end }}"
-          ],
+          "foreground_templates": ["{{ if gt .Code 0 }}#ff0000{{ end }}"],
           "properties": {
             "always_enabled": true
           },
