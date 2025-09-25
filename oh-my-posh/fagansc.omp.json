@@ -24,17 +24,6 @@
           "type": "os"
         },
         {
-          "background": "#6CA35E",
-          "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
-          "properties": {
-            "fetch_version": true
-          },
-          "style": "powerline",
-          "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
-          "type": "node"
-        },
-        {
           "background": "lightYellow",
           "foreground": "#3f3f3f",
           "powerline_symbol": "\ue0b0",
@@ -83,6 +72,51 @@
           "properties": {
             "always_enabled": false
           }
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "background": "#6a0000",
+          "foreground": "#ffffff",
+          "properties": {
+            "style": "roundrock",
+            "threshold": 0
+          },
+          "style": "diamond",
+          "template": " \ueba2 {{ .FormattedMs }}\u2800",
+          "trailing_diamond": "\ue0b4",
+          "type": "executiontime"
+        },
+        {
+          "background": "#416339",
+          "foreground": "#ffffff",
+          "leading_diamond": "\ue0b6",
+          "properties": {
+            "fetch_package_manager": true,
+            "npm_icon": " <#cc3a3a>\ue5fa</> ",
+            "yarn_icon": " <#348cba>\ue6a7</>"
+          },
+          "style": "diamond",
+          "template": "\ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "trailing_diamond": "\ue0b4 ",
+          "type": "node"
+        },
+        {
+          "background": "#40c4ff",
+          "foreground": "#ffffff",
+          "invert_powerline": true,
+          "leading_diamond": "\ue0b2",
+          "properties": {
+            "time_format": "_2,15:04"
+          },
+          "style": "diamond",
+          "template": " \uf073 {{ .CurrentDate | date .Format }} ",
+          "trailing_diamond": "\ue0b4",
+          "type": "time"
         }
       ],
       "type": "prompt"
