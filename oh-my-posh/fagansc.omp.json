@@ -36,7 +36,7 @@
             "tag_icon": "\u25b6 "
           },
           "style": "powerline",
-          "template": " {{ .HEAD }}{{ if .Staging.Changed }} {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }} ",
+          "template": " {{ .HEAD }} ",
           "type": "git"
         },
         {
