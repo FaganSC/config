@@ -5,8 +5,16 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#C678DD",
-          "foreground": "#fffef9",
+          "background": "#ff0000",
+          "background_templates": [
+            "{{ if eq .OS \"windows\" }}#0078d4{{ end }}",
+            "{{ if eq .OS \"ubuntu\" }}#ff6600{{ end }}"
+          ],
+          "foreground": "#ffffff",
+          "foreground_templates": [
+            "{{ if eq .OS \"windows\" }}#ffffff{{ end }}",
+            "{{ if eq .OS \"ubuntu\" }}#000000{{ end }}"
+          ],
           "powerline_symbol": "\ue0b0",
           "properties": {
             "windows": "\uf17a"
