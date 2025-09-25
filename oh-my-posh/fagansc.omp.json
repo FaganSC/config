@@ -5,6 +5,17 @@
       "alignment": "left",
       "segments": [
         {
+          "background": "#C678DD",
+          "foreground": "#fffef9",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "windows": "\uf17a"
+          },
+          "style": "powerline",
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "type": "os"
+        },
+        {
           "background": "#6CA35E",
           "foreground": "#ffffff",
           "powerline_symbol": "\ue0b0",
