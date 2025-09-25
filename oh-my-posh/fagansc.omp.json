@@ -29,6 +29,7 @@
         {
           "background": "lightYellow",
           "foreground": "#3f3f3f",
+          "powerline_symbol": "\ue0b0",
           "properties": {
             "style": "full"
           },
