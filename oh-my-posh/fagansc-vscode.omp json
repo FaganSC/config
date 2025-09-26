@@ -1,0 +1,107 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#ff0000",
+          "background_templates": [
+            "{{ if eq .OS \"windows\" }}#0078d4{{ end }}",
+            "{{ if eq .OS \"ubuntu\" }}#ff6600{{ end }}"
+          ],
+          "foreground": "#ffffff",
+          "foreground_templates": [
+            "{{ if eq .OS \"windows\" }}#ffffff{{ end }}",
+            "{{ if eq .OS \"ubuntu\" }}#000000{{ end }}"
+          ],
+          "leading_diamond": "\ue0b6",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "windows": "\uf17a"
+          },
+          "style": "powerline",
+          "template": " {{.Icon}}  ",
+          "type": "os"
+        },
+        {
+          "background": "lightYellow",
+          "foreground": "#3f3f3f",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "style": "full"
+          },
+          "style": "powerline",
+          "template": " {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "background": "green",
+          "background_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}yellow{{ end }}"
+          ],
+          "foreground": "black",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "branch_ahead_icon": "\u2191",
+            "branch_behind_icon": "\u2193",
+            "branch_gone": "\u2262",
+            "branch_icon": "\ue0a0 ",
+            "branch_identical_icon": "\u2261",
+            "cherry_pick_icon": "\u2713 ",
+            "commit_icon": "\u25b7 ",
+            "fetch_status": true,
+            "merge_icon": "\u25f4 ",
+            "no_commits_icon": "[no commits]",
+            "rebase_icon": "\u2c62 ",
+            "tag_icon": "\u25b6 ",
+            "fetch_upstream_icon": true
+          },
+          "style": "powerline",
+          "template": " {{ .HEAD }} ",
+          "type": "git",
+          "source": "cli",
+          "mapped_branches": {
+            "main": "🌲 ",
+            "develop": "🌳 ",
+            "hotfix/*": "🚑 ",
+            "feature/*": "🚀 ",
+            "bug/*": "🐛 ",
+            "release/*": "🏷️ "
+          }
+        },
+        {
+          "type": "status",
+          "style": "diamond",
+          "foreground": "#ffffff",
+          "background": "#00897b",
+          "background_templates": ["{{ if .Error }}#e91e63{{ end }}"],
+          "trailing_diamond": "\ue0b0",
+          "properties": {
+            "always_enabled": false
+          }
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "type": "prompt",
+      "newline": true,
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#ffffff",
+          "foreground_templates": ["{{ if gt .Code 0 }}#ff0000{{ end }}"],
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "\u276f ",
+          "type": "status"
+        }
+      ]
+    }
+  ],
+  "final_space": true,
+  "version": 3
+}
